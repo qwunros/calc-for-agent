@@ -1,0 +1,4 @@
+#!/bin/sh
+# calc-for-agent launcher: resolves its own directory, so any cwd works.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec "${CALC_PYTHON:-python3}" "$DIR/scripts/calc.py" "$@"
