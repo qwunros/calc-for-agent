@@ -1,11 +1,13 @@
 ﻿# calc for agent — 科学计算 Skill
 
+> LLM的心算不可靠！
+
 给 AI Agent 使用的**精确科学计算**技能。核心是一个纯 Python 标准库实现的命令行计算器
 （无需 sympy / mpmath / numpy），**尽可能保留精确值**：分数、有限小数、任意规模整数、
 根号（如 `sqrt(8) = 2*sqrt(2)`）以及特殊角的三角函数值都保持精确形式；只有真正无法
 精确表示的结果才会标注为近似值，并给出高精度小数（最高 2000 位）。
 
-## 安装位置
+## 项目结构
 
 ```
 calc-for-agent\
@@ -21,7 +23,7 @@ calc-for-agent\
 ├── calc.cmd / calc             # 启动器（自动定位自身目录）
 ```
 
-在任意目录下都能调用（Windows）：
+Windows下调用示例：
 
 ```powershell
 & "calc-for-agent\calc.cmd" eval "1/3 + 1/6"
