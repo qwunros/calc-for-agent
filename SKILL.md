@@ -38,11 +38,6 @@ their own directory, and work from any working directory:
 > becomes `2256`. Always write powers as `**` or `pow(a, b)` (`2**256`,
 > `pow(2,256)`) when using `calc.cmd`, or call `scripts/calc.py` directly.
 
-In this workspace the skill is installed at
-`C:\Users\asus\Desktop\calc_for_agent\.dsh\skills\calc-for-agent`. If you cannot
-see it, locate it with:
-`Get-ChildItem -Recurse -Filter calc.cmd | Where-Object FullName -like '*calc-for-agent*'`.
-
 ## Output contract
 
 Every command prints **one JSON object** on stdout:
@@ -136,5 +131,4 @@ Full details, options and edge cases: read `references/operations.md`.
   instead of inventing a result.
 * Results above ~200000 digits (e.g. `factorial(100000)`) come back with
   `exact: null` plus `approx`, `numerator_digits` and a `note`.
-* `help <command>` and `funcs` answer usage questions; tests live in
-  `tests/test_calc.py`.
+* `help <command>` and `funcs` answer usage questions. 
